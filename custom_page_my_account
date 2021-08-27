@@ -1,0 +1,24 @@
+Ext.define('CMDBuildUI.view.custompages.ticketssummary.TicketsSummary', {
+    extend: 'Ext.panel.Panel',
+
+    requires: [
+        'CMDBuildUI.view.custompages.ticketssummary.TicketsSummaryController',
+        'CMDBuildUI.view.custompages.ticketssummary.TicketsSummaryModel',
+        'CMDBuildUI.view.custompages.ticketssummary.Interval',
+        'CMDBuildUI.view.custompages.ticketssummary.BufferedGridCounter',
+
+        // plugins
+        'Ext.grid.filters.Filters',
+        'CMDBuildUI.components.grid.plugin.FormInRowWidget'
+    ],
+
+    mixins: [
+        'CMDBuildUI.mixins.CustomPage',
+        'CMDBuildUI.mixins.grids.AddButtonMixin',
+        'CMDBuildUI.mixins.grids.ContextMenuMixin',
+        'CMDBuildUI.view.custompages.ticketssummary.Mixins'
+    ],
+
+    controller: 'ticketssummary-ticketssummary',
+    viewModel: {
+        type: 'ticketssummary-ticketssummary'
